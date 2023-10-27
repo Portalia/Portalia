@@ -1,4 +1,4 @@
-appId: 'helioslauncher'
+appId: 'portalialauncher'
 productName: 'Portalia Launcher'
 artifactName: '${productName}-setup-${version}.${ext}'
 
