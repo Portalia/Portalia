@@ -60,7 +60,7 @@
                         <span>Mojang</span>
                     </div>
                     <div class="settingsAuthAccountTypeHeaderRight">
-                        <button class="settingsAddAuthAccount" id="settingsAddMojangAccount">+ Ajouter un compte Mojang</button>
+                        <button class="settingsAddAuthAccount" id="settingsAddMojangAccount" disabled>+ Ajouter un compte Mojang</button>
                     </div>
                 </div>
                 
@@ -146,9 +146,9 @@
                     </div>
                 </div>
                 <div id="settingsDropinModsContainer">
-                    <div class="settingsModsHeader">Drop-in Mods</div>
-                    <button id="settingsDropinFileSystemButton">+ Ajouter des mods <span id="settingsDropinRefreshNote">(F5 pour rafraichir)</span></button>
-                    <div id="settingsDropinModsContent">
+                    <div class="settingsModsHeader" hidden>Drop-in Mods</div>
+                    <button id="settingsDropinFileSystemButton" hidden>+ Ajouter des mods <span id="settingsDropinRefreshNote">(F5 pour rafraichir)</span></button>
+                    <div id="settingsDropinModsContent" hidden>
                         
                     </div>
                 </div>
@@ -159,7 +159,7 @@
                         <button id="settingsShaderpackButton"> + </button>
                         <div class="settingsSelectContainer">
                             <div class="settingsSelectSelected" id="settingsShadersSelected">Choisir un Shaderpack</div>
-                            <div class="settingsSelectOptions" id="settingsShadersOptions" hidden>
+                            <div class="settingsSelectOptions" id="settingsShadersOptions">
 
                             </div>
                         </div>
@@ -277,11 +277,11 @@
             <div class="settingsFieldContainer">
                 <div class="settingsFieldLeft">
                     <span class="settingsFieldTitle">Activer les mises à jour en avance.</span>
-                    <span class="settingsFieldDesc">Pre-Releases include new features which may have not been fully tested or integrated.<br>This will always be true if you are using a pre-release version.</span>
+                    <span class="settingsFieldDesc">L'activation est déactivé car elle est inutile, les mises à jour doivent être téléchargés sur notre site.</span>
                 </div>
                 <div class="settingsFieldRight">
                     <label class="toggleSwitch">
-                        <input type="checkbox" cValue="AllowPrerelease">
+                        <input type="checkbox" cValue="AllowPrerelease" disabled>
                         <span class="toggleSwitchSlider"></span>
                     </label>
                 </div>
@@ -303,13 +303,13 @@
                         <button class="settingsFileSelButton" dialogTitle="Select Data Directory" dialogDirectory="true">Choisir un fichier</button>
                     </div>
                 </div>
-                <div class="settingsFileSelDesc">All game files and local Java installations will be stored in the data directory.<br>Screenshots and world saves are stored in the instance folder for the corresponding server configuration.</div>
+                <div class="settingsFileSelDesc">Tout les fichiers de jeux et installations de Java locals seront stocké ici.<br>Les captures d'écrans et mondes solos réalisés seront enregistré dans le fichier de l'instance correspondant au serveur.</div>
             </div>
         </div>
         <div id="settingsTabAbout" class="settingsTab" style="display: none;">
             <div class="settingsTabHeader">
                 <span class="settingsTabHeaderText">A propos</span>
-                <span class="settingsTabHeaderDesc">View information and release notes for the current version.</span>
+                <span class="settingsTabHeaderDesc">Voir les informations et nouveautés de la version actuelle.</span>
             </div>
             <div id="settingsAboutCurrentContainer">
                 <div id="settingsAboutCurrentContent">
@@ -320,10 +320,10 @@
                     <div id="settingsAboutCurrentVersion">
                         <div id="settingsAboutCurrentVersionCheck">&#10003;</div>
                         <div id="settingsAboutCurrentVersionDetails">
-                            <span id="settingsAboutCurrentVersionTitle">Stable Release</span>
+                            <span id="settingsAboutCurrentVersionTitle">Version stable</span>
                             <div id="settingsAboutCurrentVersionLine">
                                 <span id="settingsAboutCurrentVersionText">Version </span>
-                                <span id="settingsAboutCurrentVersionValue">0.0.1-alpha.12</span>
+                                <span id="settingsAboutCurrentVersionValue">1.0.2</span>
                             </div>
                         </div>
                     </div>
@@ -339,8 +339,8 @@
             <div class="settingsChangelogContainer">
                 <div class="settingsChangelogContent">
                     <div class="settingsChangelogHeadline">
-                        <div class="settingsChangelogLabel">Release Notes</div>
-                        <div class="settingsChangelogTitle">Changelog</div>
+                        <div class="settingsChangelogLabel">Notes de mise à jour.</div>
+                        <div class="settingsChangelogTitle">Logs de changement</div>
                     </div>
                     <div class="settingsChangelogText">
                         No Release Notes

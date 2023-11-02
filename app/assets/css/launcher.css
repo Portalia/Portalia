@@ -22,6 +22,11 @@
     src: url('../fonts/Ringbearer.ttf');
 }
 
+@font-face {
+    font-family: 'OMEGLE';
+    src: url('../fonts/OMEGLE.ttf');
+}
+
 /*******************************************************************************
  *                                                                             *
  * Element Styles                                                              *
@@ -3398,10 +3403,11 @@ input:checked + .toggleSwitchSlider:before {
     background: none;
     border: none;
     cursor: pointer;
-    font-weight: 900;
+    font-weight: 9000;
     letter-spacing: 2px;
     text-shadow: 0px 0px 0px #bebcbb;
     font-size: 20px;
+    font-family: 'OMEGLE';
     padding: 0px;
     transition: 0.25s ease;
     outline: none;
