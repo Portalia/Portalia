@@ -989,20 +989,15 @@ async function loadNews(){
                     const date = new Date(el.find('pubDate').text()).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'})
 
                     // Resolve comments.
-                    let comments = el.find('slash\\:comments').text() || '0'
+                    let comments = el.find('comments').text() || '0'
                     comments = comments + ' Comment' + (comments === '1' ? '' : 's')
 
                     // Fix relative links in content.
-                    let content = el.find('content\\:encoded').text()
-                    let regex = /src="(?!http:\/\/|https:\/\/)(.+?)"/g
-                    let matches
-                    while((matches = regex.exec(content))){
-                        content = content.replace(`"${matches[1]}"`, `"${newsHost + matches[1]}"`)
-                    }
-
+                    let content = el.find('description').text()
+                    
                     let link   = el.find('link').text()
                     let title  = el.find('title').text()
-                    let author = el.find('dc\\:creator').text()
+                    let author = el.find('author').text()
 
                     // Generate article.
                     articles.push(
