@@ -48,7 +48,7 @@ if(!isDev){
                 loggerAutoUpdater.info('New update available', info.version)
                 
                 if(process.platform === 'darwin'){
-                    info.darwindownload = `http://dwnldprtl.free.fr/Portalia-Launcher-setup-2.0.2.exe`
+                    info.darwindownload = `http://dwnldprtl.free.fr/Portalia-Launcher-setup-${info.version}.exe`
                     showUpdateUI(info)
                 }
                 
