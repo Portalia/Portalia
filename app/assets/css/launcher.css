@@ -2860,7 +2860,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Logo image. */
 #image_seal {
-    height: 70px;
+    height: 100px;
     width: auto;
     position: relative;
     border: 2px solid white;
@@ -3068,13 +3068,13 @@ input:checked + .toggleSwitchSlider:before {
     height: 12px;
     transition: 0.25s ease;
     cursor: pointer;
-    height: 12px;
+    height: 20px;
     width: 25px;
 }
 .mediaSVG:hover,
 .mediaURL:focus .mediaSVG,
 .mediaSVG:active {
-    height: 20px;
+    height: 25px;
 }
 
 /* Social media URL shared styles. */
@@ -3099,12 +3099,12 @@ input:checked + .toggleSwitchSlider:before {
 /* Settings icon colors. */
 #settingsSVG {
     stroke: #ffffff;
-    height: 15px;
+    height: 20px;
 }
 .mediaButton:hover #settingsSVG,
 .mediaButton:focus #settingsSVG,
 .mediaButton:active #settingsSVG {
-    height: 23px;
+    height: 25px;
 }
 
 /* Settings tooltip styles. */
@@ -3465,6 +3465,7 @@ input:checked + .toggleSwitchSlider:before {
     line-height: 24px;
     padding: 0px;
     transition: 0.25s ease;
+    font-size: 15px;
 }
 #server_selection_button:hover,
 #server_selection_button:focus {
@@ -3971,4 +3972,7 @@ input:checked + .toggleSwitchSlider:before {
 /* Class which is applied when the spinner image is spinning. */
 .rotating {
     animation: rotating 10s linear infinite;
+}
+#invisible {
+    color: transparent;
 }
