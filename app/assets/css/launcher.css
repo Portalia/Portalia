@@ -51,10 +51,10 @@ body, button {
     color: white;
 }
 
-/*body {
+body {
     background: url('./../images/backgrounds/0.jpg') no-repeat center center fixed;
     background-size: cover;
-}*/
+}
 
 /*******************************************************************************
  *                                                                             *
@@ -3948,7 +3948,7 @@ input:checked + .toggleSwitchSlider:before {
 /* Stationary image for the spinner. */
 #loadCenterImage {
     position: absolute;
-    width: 277px;
+    width: 250px;
     height: auto;
 }
 
@@ -3965,7 +3965,7 @@ input:checked + .toggleSwitchSlider:before {
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(0deg);
     }
 }
 
