@@ -1,6 +1,6 @@
 {
   "name": "PortaliaLauncher",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "productName": "Portalia Studio Launcher",
   "description": "Modded Minecraft Launcher",
   "author": "Daniel Scalzi (https://github.com/dscalzi/) et LeFaucheurNoir",
@@ -20,10 +20,10 @@
     "lint": "eslint --config .eslintrc.json ."
   },
   "engines": {
-    "node": "18.x.x"
+    "node": "20.x.x"
   },
   "dependencies": {
-    "@electron/remote": "^2.0.10",
+    "@electron/remote": "^2.1.2",
     "adm-zip": "^0.5.9",
     "discord-rpc-patch": "^4.0.1",
     "ejs": "^3.1.9",
@@ -35,10 +35,14 @@
     "helios-core": "~2.0.5",
     "helios-distribution-types": "^1.2.0",
     "jquery": "^3.7.0",
-    "semver": "^7.5.4"
+    "PortaliaLauncher": "file:",
+    "request": "^2.88.2",
+    "semver": "^7.5.4",
+    "xmlhttp": "^0.0.0",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
-    "electron": "^26.0.0",
+    "electron": "^34.0.0",
     "electron-builder": "^24.6.3",
     "eslint": "^8.47.0"
   },

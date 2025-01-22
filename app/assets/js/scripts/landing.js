@@ -32,7 +32,7 @@ const {
 // Internal Requirements
 const DiscordWrapper          = require('./assets/js/discordwrapper')
 const ProcessBuilder          = require('./assets/js/processbuilder')
-
+const { source } = require('github-syntax-dark')
 // Launch Elements
 const launch_content          = document.getElementById('launch_content')
 const launch_details          = document.getElementById('launch_details')
@@ -41,7 +41,8 @@ const launch_progress_label   = document.getElementById('launch_progress_label')
 const launch_details_text     = document.getElementById('launch_details_text')
 const server_selection_button = document.getElementById('server_selection_button')
 const user_text               = document.getElementById('user_text')
-
+const user_grade              = document.getElementById('user_grade')
+const user_money              = document.getElementById('user_money')
 const loggerLanding = LoggerUtil.getLogger('Landing')
 
 /* Launch Progress Wrapper Functions */
@@ -140,7 +141,7 @@ document.getElementById('avatarOverlay').onclick = async e => {
     await prepareSettings()
     switchView(getCurrentView(), VIEWS.settings, 500, 500, () => {
         settingsNavItemListener(document.getElementById('settingsNavAccount'), false)
-    })
+    });
 }
 
 // Bind selected account
@@ -157,6 +158,7 @@ function updateSelectedAccount(authUser){
     user_text.innerHTML = username
 }
 updateSelectedAccount(ConfigManager.getSelectedAccount())
+
 
 // Bind selected server
 function updateSelectedServer(serv){
